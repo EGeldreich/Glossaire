@@ -14,21 +14,27 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
+
     Il faut installer un serveur local. Laragon ou MAMP permettent d'en créer un
 
 2.	Qu’est-ce qu’un algorithme ?
+
     Une suite d'odres à executer pour parvenir à un résultat
 
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
-    en PHP, une variable est un nom auquel on associe une valeur (pouvant prendre de nombreuse formes) qui peut varier. $nomDeMaVariable
+
+    En PHP, une variable est un nom auquel on associe une valeur (pouvant prendre de nombreuse formes) qui peut varier. $nomDeMaVariable
 
 4.	Qu’est-ce que la portée d’une variable ?
+
     La portée d'une variable représente à quels endroit elle peut être appelée, certaines variable ne sont définie qu'à l'intérieur d'une fonction par exemple.
 
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
+
     Une constante est proche d'une variable - dans sa façon de la définir et sa portée - mais garde une valeur constante
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
+
     Une superglobale est une variable disponible par défault en PHP. Il en existe 8.
     $_GET $_POST $_COOKIE $_REQUEST $_SESSION $_FILES $_ENV $_SERVEUR
   	$_SESSION['products'][] = $product; Ajoute un objet $product précédemment défini dans le tableau 'products' de la session de l'utilisateur
@@ -153,6 +159,7 @@ h.	Concaténer 2 chaînes de caractères
 
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+
     L'injection SQL est le fait pour un utilisateur malveillant d'injecter du code (via un formulaire par exemple) pour effectuer une action.
    	On peut s'en prévenir en traitant les inputs reçus pour les utilsateurs de la bonne façon (en enlevant les balises par exemple)
 
