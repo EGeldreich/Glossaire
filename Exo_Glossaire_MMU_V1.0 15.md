@@ -43,6 +43,9 @@
 9.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
 10.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
 11.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+
+    strlen(string $string): int
+
 12.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
 13.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 14.	Quelle est la différence entre les instructions « require » et « include » en PHP
