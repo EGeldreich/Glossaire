@@ -14,22 +14,36 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
-2.	Qu’est-ce qu’un algorithme ?  
+    Il faut installer un serveur local. Laragon ou MAMP permettent d'en créer un
+
+2.	Qu’est-ce qu’un algorithme ?
+    Une suite d'odres à executer pour parvenir à un résultat
+
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
+    en PHP, une variable est un nom auquel on associe une valeur (pouvant prendre de nombreuse formes) qui peut varier. $nomDeMaVariable
+
 4.	Qu’est-ce que la portée d’une variable ?
+    La portée d'une variable représente à quels endroit elle peut être appelée, certaines variable ne sont définie qu'à l'intérieur d'une fonction par exemple.
+
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
-7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
-8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
-10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
-11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-13.	Quelle est la différence entre les instructions « require » et « include » en PHP
-14.	Comment effectuer une redirection en PHP ?
-15.	Définir la partie « front-end » et « back-end » d’une application
-16.	Définir le contrôle de version ? Qu’est-ce que Git ?
-17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+    Une constante est proche d'une variable - dans sa façon de la définir et sa portée - mais garde une valeur constante
+
+6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
+    Une superglobale est une variable disponible par défault en PHP. Il en existe 8.
+    $_GET $_POST $_COOKIE $_REQUEST $_SESSION $_FILES $_ENV $_SERVEUR
+  	$_SESSION['products'][] = $product; Ajoute un objet $product précédemment défini dans le tableau 'products' de la session de l'utilisateur
+
+8.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+9.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+10.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+11.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+12.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+13.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+14.	Quelle est la différence entre les instructions « require » et « include » en PHP
+15.	Comment effectuer une redirection en PHP ?
+16.	Définir la partie « front-end » et « back-end » d’une application
+17.	Définir le contrôle de version ? Qu’est-ce que Git ?
+18.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
 18.	Définir HTML
@@ -139,15 +153,19 @@ h.	Concaténer 2 chaînes de caractères
 
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
-95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
-96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
-97.	Définir l’attaque par force brute et l’attaque par dictionnaire
-98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
-99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-101.	Qu’est-ce qu’une politique de mots de passe forts ?
-102.	Qu’est-ce que l’hameçonnage ?
-103.	Définir la « validation des entrées »
+    L'injection SQL est le fait pour un utilisateur malveillant d'injecter du code (via un formulaire par exemple) pour effectuer une action.
+   	On peut s'en prévenir en traitant les inputs reçus pour les utilsateurs de la bonne façon (en enlevant les balises par exemple)
+
+96.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+    
+97.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+98.	Définir l’attaque par force brute et l’attaque par dictionnaire
+99.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+100.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+101.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+102.	Qu’est-ce qu’une politique de mots de passe forts ?
+103.	Qu’est-ce que l’hameçonnage ?
+104.	Définir la « validation des entrées »
 
 ## RGPD
 104.	Qu’est-ce que le RGPD ?
