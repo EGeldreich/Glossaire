@@ -173,6 +173,10 @@ h.	Concaténer 2 chaînes de caractères
 99.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
 100.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 101.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+    Le hachage transforme un mot de passe en une chaine de caractères plus complexe, afin de ne pas stocker "en clair" le mdp des utilisateurs.
+Algorithme de hachage faible : md5 // sha256
+Algorithme de hachage fort : bcrypt (defaut actuellement sur password_hash) // argon2i
+
 102.	Qu’est-ce qu’une politique de mots de passe forts ?
 103.	Qu’est-ce que l’hameçonnage ?
 104.	Définir la « validation des entrées »
