@@ -166,20 +166,21 @@ h.	Concaténer 2 chaînes de caractères
     L'injection SQL est le fait pour un utilisateur malveillant d'injecter du code (via un formulaire par exemple) pour effectuer une action.
    	On peut s'en prévenir en traitant les inputs reçus pour les utilsateurs de la bonne façon (en enlevant les balises par exemple)
 
-96.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
     
-97.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
-98.	Définir l’attaque par force brute et l’attaque par dictionnaire
-99.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
-100.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-101.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+97.	Définir l’attaque par force brute et l’attaque par dictionnaire
+98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
     Le hachage transforme un mot de passe en une chaine de caractères plus complexe, afin de ne pas stocker "en clair" le mdp des utilisateurs.
 Algorithme de hachage faible : md5 // sha256
 Algorithme de hachage fort : bcrypt (defaut actuellement sur password_hash) // argon2i
 
-102.	Qu’est-ce qu’une politique de mots de passe forts ?
-103.	Qu’est-ce que l’hameçonnage ?
-104.	Définir la « validation des entrées »
+101.	Qu’est-ce qu’une politique de mots de passe forts ?
+102.	Qu’est-ce que l’hameçonnage ?
+103.	Définir la « validation des entrées »
+    Valide les données entrées par l'utilisateur lors de son login, en les comparant avec les infos stockées en BDD (et en verifiant le hash du mdp)
 
 ## RGPD
 104.	Qu’est-ce que le RGPD ?
