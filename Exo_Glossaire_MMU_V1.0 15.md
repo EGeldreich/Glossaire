@@ -35,24 +35,37 @@
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
 
-    Une superglobale est une variable disponible par défault en PHP. Il en existe 8.
-    $_GET $_POST $_COOKIE $_REQUEST $_SESSION $_FILES $_ENV $_SERVEUR
+    Une superglobale est une variable disponible par défault en PHP. Il en existe 8.  
+    $_GET $_POST $_COOKIE $_REQUEST $_SESSION $_FILES $_ENV $_SERVEUR  
   	$_SESSION['products'][] = $product; Ajoute un objet $product précédemment défini dans le tableau 'products' de la session de l'utilisateur
 
 8.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
-9.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-10.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
-11.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+
+    Nombre entier (int)  $a = 42;  
+  	Nombre décimal (float)  $a = 4.2;  
+  	Chaine de caractères (string) $a = "hey";    
+  	Booléen (boolean) $a = false;  
+  	Tableau (array) $a = [ "a", "b"];  
+  	Object (object) $a = new myClass;  
+  	Vide (null) $a = null;  
+    
+10.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+
+    Tableaux indéxés ( $tableau = ["elem1" , "elem2", ...]) dont les clés sont par défaut des chiffres, commencant à 0.  
+    Tableau associatif ( $tableau = [ "nom" => "Emmanuel", "age" => "31"] ) dont les clés sont des chaînes de caractères
+
+11.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+12.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
 
     strlen(string $string): int
 
-12.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-13.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-14.	Quelle est la différence entre les instructions « require » et « include » en PHP
-15.	Comment effectuer une redirection en PHP ?
-16.	Définir la partie « front-end » et « back-end » d’une application
-17.	Définir le contrôle de version ? Qu’est-ce que Git ?
-18.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+13.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+14.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+15.	Quelle est la différence entre les instructions « require » et « include » en PHP
+16.	Comment effectuer une redirection en PHP ?
+17.	Définir la partie « front-end » et « back-end » d’une application
+18.	Définir le contrôle de version ? Qu’est-ce que Git ?
+19.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
 18.	Définir HTML
