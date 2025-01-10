@@ -88,13 +88,39 @@
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
+
+    UX (experience utilisateur) concerne tout ce qui est lié à l'ergonomie d'un site (arborescence, affordance, interaction ...)    
+    UI (interface utilisateur) concerne l'interface elle même (typographie, couleurs)
+    Les deux sont liés, puisque l'UI fait partie de l'experience utilisateur  
+
 36.	Qu’est-ce qu’un wireframe ? 
+
+    Un wireframe est généralement la première étape pour poser un design, il s'agit de l'ossature, qui se concentre sur le placement des éléments et leur taille  
+
 37.	Qu’est-ce qu’un prototype ? 
+
+    Un prototype, en web, est une maquette poussée, avec les interactions visibles, ainsi que les liens entre les différentes pages  
+
 38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
+
+    La hiérarchie visuelle est le fait que certains éléments doivent primer sur d'autres, car ils sont plus important. On peut influencer la hiérarchie visuelle via la taille ou la couleur par exemple  
+
 39.	Qu’est-ce que l’accessibilité en UX Design ? 
+    
+    L'accessibilité est la capacité (nécessité) pour un site d'être consulté par des personnes avec divers handicap physique (mauvaise vue, membre cassé ...) ou matérielle ( mauvaise connexion / pas de souris ...)  
+
 40.	Qu’est-ce qu’une grille de mise en page ?
+
+    Une grille de mise en page est une grille que l'on utilise lors de la création de wireframes ou maquette pour s'assurer que les éléments soient placés correctement (alignés, même espacement ...)  
+
 41.	Qu’est-ce que la notion d’affordance en UX Design ?
+
+    La notion d'affordance est à la capacité d'un élément à être compris clairement. Le fait que le curseur change au survol d'un élément cliquable, ou l'utilisation d'icones répandues sont des éléments qui favorisent l'affordance  
+
 42.	Qu’est-ce qu’un « mobile first design » ?
+    
+    Un design mobile first est un design qui se concentre en premier lieu sur sa version réduite (mobile) puis qui pense sa version grand écran en second temps  
+    Cette méthode est souvent utilisé pour les sites / web apps qui visent une utilisation principalement sur mobile
 
 ## Programmation orientée objet (POO)
 43.	Donner une définition de la programmation orientée objet 
