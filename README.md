@@ -68,23 +68,69 @@
 19.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
-18.	Définir HTML
-19.	Définir CSS
-20.	Définir Javascript
-21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
-22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
-23.	Qu’est-ce qu’un sélecteur CSS ?
+18.	Définir HTML  
+
+    HyperText Markup Langage, l'html est l'ossature d'un site web, son fond, le contenu lisible.  
+
+19.	Définir CSS  
+
+    Cascading Style Sheets, le CSS est la surcouche de décors par dessus l'html. Il sert à améliorer l'expérience utilisateur en créant une interface pratique.  
+
+20.	Définir Javascript  
+
+    Le javascript est le langage utilisé principalement pour ajouter de l'interactivité à un site, il vient généralement en renfort du CSS pour améliorer l'expérience utilisateur.
+
+21.	Définir JSON. Dans quel contexte ce format est-il utilisé ?  
+
+    JavaScript Object Notation, le JSON est le principale langage utilisé lors de l'échange de données simples, par exemple lors de l'utilisation d'API
+ 
+22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?  
+
+    Il est possible d'utiliser le langage JavaScript coté serveur, en utilisant Node.JS par exemple
+
+23.	Qu’est-ce qu’un sélecteur CSS ?  
+
+    Un sélecteur CSS est ce qui définie ("sélectionne") les éléments qui seront affectés par le code qui lui est donné
+    .exemple { sélectionne tous les éléments ayant la classe exemple }
+
 24.	Quelle balise HTML permet de créer un lien hypertexte ?
+
+    <a href="adress.du.lien">Texte cliquable</a>
+
 25.	Qu’est-ce qu’une requête AJAX ?
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+
+    .classe{} #id{} type{}
+
 27.	Définir le responsive design
+
+    Le responsive design fait référence à la fléxibilité de l'interface d'un site lors du changement de la taille de l'écran.  
+    Un bon responsive design utilise des valeurs flexibles ( % par exemple ) et des breakpoints réfléchis à l'avance pour le changement du placement des éléments.
+
 28.	Qu’est-ce que le templating ?
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+
+tableau.push(element);
+
 31.	Qu’est-ce qu’un « media query » ?
+
+    Un media query est un "breakpoint" (point de bascule) utilisé en CSS pour définir des attributs qui deviennent valable dans certains cas, lorsque le breakpoint est activé.
+
 32.	Qu’est-ce qu’un pseudo élément en CSS ?
+
+    Un pseudo élément CSS est un élément qui n'existe pas en HTML mais qui est créé en CSS, par exemple ::before crée un ouvel élément avant l'élément selectionné
+
 33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+
+    Bootstrap est une librairie CSS, qui permet d'ajouter à son HTML des classes pré-stylisées.
+    TailWind est équivalent dans son utilisation.
+
 34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+
+    method="POST" et method="GET".
+    POST stocke les données dans la session alors que GET les stocke dans l'URL.
+    POST est donc plus 'privatif' et moins sujet aux changements par l'utilisateur.
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
