@@ -247,101 +247,350 @@
 
 49. Qu’est-ce que l’encapsulation ?
 
-    >
+    > L'encapsulation est le fait de regrouper un ensemble de méthodes et de données dans une structure
+    > Tout le système de POO est basé sur l'encapsulation
 
 50. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
+
+    > Etendre une classe signifie faire profiter des propriétés et méthodes d'une classe à un nouvelle
+    > On parle également d'héritage
+    > class Voiture extends Machine {}
+
 51. Définir l’opérateur de résolution de portée
+
+    > **::**
+
 52. Définir une méthode / propriété statique
+
+    > Des propriétés ou méthodes définient comme **static** sont accessibles sans avoir besoin d'instancier la classe
+    > Voiture::nb_roue;
+
 53. Définir le polymorphisme en POO
+
+    > Le polymorphisme est un concept où des objets de différentes classes peuvent répondre de manièr différente aux mêmes actions
+    > Il est par exemple possible de définir deux méthodes portant le même noms mais qui effectue une action différente en fonction de la classe
+
 54. Définir une méthode / classe abstraite ?
+
+    > Une classe **abstract** est une classe qui ne peut pas être instanciée
+    > Une méthode abstaite est une méthode définie mais sans contenu. Une méthode ne peut être abstraite que dans une classe abstraite
+    > Cela est utilisé pour l'héritage des classes
+
 55. Définir le chaînage de méthodes
+
+    > Le chaînage de méthodes est le fait de mettre à la suite plusieurs méthodes.
+    > Cela peut par exemple être utilisé pour **_get_** des entités qui sont encastrés
+    > $voiture->getRoue()->getPneu()->getMarque()
+
 56. Qu’est-ce que la méthode \_\_toString() ? Existe-t-il d’autres méthodes « magiques »
+
+    > La méthode **toString** permet de définir le string qui est renvoyé lors d'un echo de l'objet
+    > Il existe de nombreuses méthodes magiques:
+    > **construct(), **destruct(), **call(), **callStatic(), **get(), **set(), **isset(), **unset(), **sleep(), **wakeup(), **serialize(), **unserialize(), **toString(), **invoke(), **set_state(), **clone(), and \_\_debugInfo()
+    > Ces méthodes change le comportement par défaut de PHP
+
 57. Qu’est-ce qu’un « autoload » ?
+
+    > Un autoload permet d'**_include_** automatiquement les fichiers dans lesquels sont définis les classes, afin d'éviter à devoir rajouter chaque classe manuellement
+
+    ```php
+    spl_autoload_register(function ($class_name) {
+        include $class_name . '.php';
+    });
+
+    ```
+
 58. Comment appelle-t-on en français les « getters » et les « setters » ?
+
+    > **accesseurs** et **mutateurs**
+
 59. Qu’est-ce que la sérialisation en PHP ?
+
+    > La sérialisation transforme un objet ou structure en une chaine de caractères.
+    > Cela permet de transferer l'objet ou la structure à un autre fichier par exemple.
+    > **serialize()** // **unserialize()**
+    > Un peu le même principe que JSON parse / stringify
 
 ## Architecture
 
 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+
+    > L'architecture client / serveur est l'environnement qui met en relation les machines des utilisateurs (client) et les machines de type serveur
+    > On intérroge généralement le serveur avec une requête GET
+    > Ce type de requête appartient au protocole HTTP (HyperText Transfer Protocol)
+    > HTTPS (Secure) combine l'HTTP à une couche de chiffrement pour le sécuriser
+
 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+
+    > Un **_design pattern_** est une façon structurée d'organiser son code, pour permettre une expansion et un partage du code plus simple.
+    > Les design pattern sont traditionnellement créés pour répondre à un problème réccurant
+    > MVC Model View Controller
+    > Factory
+    > Singleton
+
 62. Qu’est-ce que l’architecture MVC ?
+
+    > L'architecture MVC (Model View Controller) est un structuration spécifique qui permet de bien séparer son code
+
 63. Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+
+    > Model : s'occupe des données (génération des entités et dialogue avec la BDD)
+    > View : s'occupe de la génération des pages
+    > Controller : s'occupe de la logique, c'est ici que se passe les redirections, la sécurité ...
+
 64. Quels sont les avantages de l’architecture MVC ?
+
+    > Facilité de modification et de gestion. Structure connue et logique qui permet une bonne passation du projet à d'autres développeurs
+
 65. Existe-t-il des variantes à l’architecture MVC ?
+
+    > Il existe de nombreuses variantes à l'architecture MVC, qui tentent de combler certaines lacunes
+    > HMVC (Hierarchical)
+    > MVP Model View Presenter
+    > ...
+
 66. Qu’est-ce qu’une API ? Définir l’architecture REST
+
+    > Une API est un regroupement de données ordonnées, disponibles via des requêtes HTTP
+    > Une API dispose d'un ou plusieurs **endpoint** qui permettent de récupérer ces données
+    > https://pokeapi.co/api/v2/pokemon/ditto
+    > REST REpresentationnal State Transfer, définit un ensemble de contraintes à utiliser pour créer des services web
+    > il consiste en les **méthodes HTTP** **_GET, HEAD, POST, PUT, PATCH, DELETE, CONNECT, OPTIONS, TRACE_**,
+    > un **URI** et un **type de média (type MIME)** (par exemple JSON)
 
 ## Modélisation - Base de données
 
 67. Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+
+    > La modélisation de données est la création d'un modèle visuel représentant une base de donnée.
+    > Cela permet de mieux visualiser les besoins avant de se lancer dans la création
+    > La méthode Merise séparent un modèle en 3 niveaux ( Conceptuel **MCD**, Logique **MLD** et Physique **MPD** )
+
 68. Quelles sont les 3 étapes principales de la méthode Merise ?
-    a. Analyse, conception et réalisation
-    b. Planification, exécution et contrôle
-    c. Création, modification et suppression
+
+    > Analyse, conception et réalisation
+
 69. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+
+    > Schéma représentant la structure du système d'information (dans notre cas généralement la base de donnée)
+    > Met en avant les relations et les dépendances (**ManyToOne, OneToMany, ManyToMany** ...)
+
 70. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+
+    > Schéma représentant la structure du système
+    > Précise la volumétrie, la structure et l'organisation des données (précise le type des données, place les clés étrangères)
+
 71. Donner la définition des mots suivants :
     a. Entité
-    b. Relation
-    c. Cardinalité
-    d. Clé primaire / clé étrangère
+
+    > Une entité est un élément que l'on souhaite représenter dans sa base de donnée. **_USER_** **_COMMENT_** **_TEACHER_** ...
+    > b. Relation
+    > Lien entre les entités
+    > c. Cardinalité
+    > Type du lien, **_ManyToOne_** **_OneToMany_** ...
+    > d. Clé primaire / clé étrangère
+    > La clé primaire est l'identifiant unique de l'entité
+    > La clé étrangère est la référence d'une clé primaire d'une autre table
+
 72. Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+
+    > Un table associative
+
 73. Qu’est-ce qu’une base de données ?
+
+    > Ensemble ordonnée de données, sauvegardé sur un serveur
+
 74. Définir les notions suivantes :
     a. SQL
-    b. MySQL
-    c. SGBD (donner 2 exemples de SGBD)
-75. Dans une base de données, les données sont stockées dans des **_. Celles-ci sont constituées de lignes appelées _** et de colonnes appelées \_\_\_
+
+    > Langage utilisé avec les bases de données, Structured Query Language
+    > b. MySQL
+    > Système de gestion de base de donnée
+    > c. SGBD (donner 2 exemples de SGBD)
+    > Un système de gestion de base de donnée est un logiciel permettant aux utilisateurs de créer et gérer des bases de données
+    > MySQL, MongoDB, PostgreSQL ...
+
+75. Dans une base de données, les données sont stockées dans des \_\_\_. Celles-ci sont constituées de lignes appelées \_\_\_ et de colonnes appelées \_\_\_
+
+    > Tables
+    > Entrées
+    > Champs
+
 76. Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+
+    > Une base de donnée relationnelle gère les relations entre les tables (à l'aide de clé étrangères), une non relationnelle ne comporte que des tables indépendantes (NoSQL)
+
 77. Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+
+    > Une jointure permet, en SQL, de récupérer des infos à travers plusieurs tables
+    > INNER JOIN retourne les entrées avec une condition (id = clé étrangère)
+    > LEFT / RIGHT JOIN retourne les entrées de 2 tables en conservant l'intégralité de l'une d'elle, et seulement les entrées qui répondent à la condition de l'autre
+    > FULL JOIN retourne toutes les entrées, mais avec une valeur nulle si la condition n'est pas remplie
+
 78. A quoi sert une vue dans une base de données ?
+
+    > Une vue dans une base de donnée est une requête enregistrée qui permet d'acceder aux données voulues plus simplement.
+    > Cela permet de l'utiliser comme une table temporaire virtuelle
+
 79. Qu’est-ce que l’intégrité référentielle dans une base de données ?
+
+    > L'intégrité référentielle est la protection dans une base de données relationnelle qui empèche de supprimer un élément si celui ci à un lien avec une autre table
+    > Il est possible de changer l'intégrité référentielle, par exemple en mettant en place des supression en **CASCADE**
+
 80. Quelles sont les fonctions d’agrégation en SQL ?
+
+    > COUNT()
+    > SUM()
+    > MIN() MAX()
+    > AVG()
+    > Une requête comprenant une fonction d'agrégation doit se terminer par un GROUP BY
+
 81. Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+
+    > Create Read Update Delete
+    > La capacité de créer, lire, modifier et supprimer une entrée
+
 82. Quelles sont les clauses qui permettent de :
     a. Insérer un nouvel enregistrement dans une table
-    b. Modifier un enregistrement dans une table
-    c. Supprimer un enregistrement dans une table
-    d. Supprimer la base de données
-    e. Filtrer les résultats d’une requête SQL
-    f. Trier les résultats d’une requête SELECT
-    g. Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
-    h. Concaténer 2 chaînes de caractères
+
+    > INSERT INTO table VALUES ('valeur 1', 'valeur 2', ...)
+    > b. Modifier un enregistrement dans une table
+    > UPDATE table SET nom_colonne = '...' WHERE ...
+    > c. Supprimer un enregistrement dans une table
+    > DELETE from table WHERE
+    > d. Supprimer la base de données
+    > DROP DATABASE ma_base
+    > e. Filtrer les résultats d’une requête SQL
+    > SELECT \* WHERE conditions du filtre
+    > f. Trier les résultats d’une requête SELECT
+    > SELECT ... ORDER BY 'colonne' ASC / DESC
+    > g. Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
+    > SELECT ... GROUP BY 'colonne'
+    > h. Concaténer 2 chaînes de caractères
+    > CONCAT(col1, ' ', col2) AS nouveauNom
+
 83. Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+
+    > On utilise la classe native PDO
+
+    ```php
+    public static PDO::connect(
+        string $dsn,
+        ?string $username = null,
+        #[\SensitiveParameter] ?string $password = null,
+        ?array $options = null
+    ): static
+    ```
 
 ## Symfony
 
 84. Qu’est-ce que Symfony ?
+
+    > Symfony est un framework PHP
+
 85. Sur quel langage de programmation et design pattern repose Symfony ?
+
+    > Langage PHP
+    > design pattern MVC
+
 86. Quelle est la dernière version en date de Symfony ?
+
+    > Stable : 7.2
+
 87. Qu’est-ce qu’un bundle ?
+
+    > Un **_bundle_** est une sorte de plugin, il permet d'importer des fonctionnalités
+
 88. Quel est le moteur de template utilisé par défaut dans Symfony ?
+
+    > Twig
+
 89. Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
+
+    > **Object Relational Mapping**, gère l'interaction entre la base de données et les objets utilisés par l'application
+    > Au sein de Symfony, l'ORM est **Doctrine**
+
 90. Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
+
+    > L'injection de dépendance permet de gérer la dépendences entre les objets
+
+    ```php
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
+    ```
+
+    > L'outil utilisé est le **Service Container**, et l'intégralité des dépendances est dans le fichier services.yaml
+
 91. Que permet le bundle Maker au sein de Symfony ?
+
+    > Le bundle Maker permet de créer des fichiers via la commande
+    > symfony console make:entity
+
 92. Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
+
+    > DQL
+
 93. Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+
+    > security (security.yaml)
 
 ## Sécurité
 
 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
 
-    L'injection SQL est le fait pour un utilisateur malveillant d'injecter du code (via un formulaire par exemple) pour effectuer une action.
-    On peut s'en prévenir en traitant les inputs reçus pour les utilsateurs de la bonne façon (en enlevant les balises par exemple)
+    > L'injection SQL est le fait pour un utilisateur malveillant d'accéder à une base de donnée et de la récupérer ou la modifier
+    > Il est possible de s'en prévenir en préparant ces requêtes SQL avec des paramètres puis de les executer
+    > **Requête paramétrée**
 
 95. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+
+    > Cross Site Scripting, injection de contenu dans une page.
+    > Peut rediriger, voler des informations (cookies par exemple), effectuer des actions, empecher la lecture de la page
+    > On peut s'en prémunir en filtrant les contenus saisis par les utilisateurs
+
 96. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+
+    > Cross Site Request Forgery
+    > Envoie de requêtes HTTP à l'insu de l'utilisateur (Qui a des droits particulier sur son application, admin)
+
+    > On peut s'en prémunir avec des token CSRF à implémenter dans les formulaires
+    > Une vérification est faite sur la correspondance du token reçu et envoyé
+
 97. Définir l’attaque par force brute et l’attaque par dictionnaire
+
+    > L'attaque par force brute consiste à chercher un mot de passe en essayant toutes les combinaisons possible
+    > L'attaque par dictionnaire consiste à utiliser une librairie des mots de passe les plus courants
+
 98. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+
+    > Déni de service distribué (DDoS), surcharge de trafic d'un site, qui le fait tomber en panne
+    > Failles liées aux plugins et frameworks
+
 99. A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+
+    > L'authentification permet de s'assurer que l'utilisateur est bien lui même (via identifiant et mot de passe)
+    > Il est possible de bloquer certaines fonctionnalités d'une application web, empechant des actions à un 'guest' par exemple
+    > Ou en ne permettant certaines actions qu'aux 'admins', on parle alors d'authorisation
+
 100.    Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-        Le hachage transforme un mot de passe en une chaine de caractères plus complexe, afin de ne pas stocker "en clair" le mdp des utilisateurs.
-        Algorithme de hachage faible : md5 // sha256
-        Algorithme de hachage fort : bcrypt (defaut actuellement sur password_hash) // argon2i
+
+        > Le hachage transforme un mot de passe en une chaine de caractères plus complexe, afin de ne pas stocker "en clair" le mdp des utilisateurs.
+        > Algorithme de hachage faible : md5 // sha256
+        > Algorithme de hachage fort : bcrypt (defaut actuellement sur password_hash) // argon2i
 
 101.    Qu’est-ce qu’une politique de mots de passe forts ?
-102.    Qu’est-ce que l’hameçonnage ?
-103.    Définir la « validation des entrées »
-        Valide les données entrées par l'utilisateur lors de son login, en les comparant avec les infos stockées en BDD (et en verifiant le hash du mdp)
+
+
+    > Obligé l'utilisateur à créer un mot de passe complexe, voir recommandation CNIL
+
+102. Qu’est-ce que l’hameçonnage ?
+
+
+    > Récupérer des informations sensibles (d'authentification par exemple) via divers moyen (se faire passer pour un conseiller par exemple)
+
+103. Définir la « validation des entrées »
+
+
+    > Valide les données entrées par l'utilisateur lors de son login, en les comparant avec les infos stockées en BDD (et en verifiant le hash du mdp)
 
 ## RGPD
 
@@ -390,8 +639,6 @@
 140. Quelle est l'unité de code testée lors d'un test unitaire ?
 141. Quelles sont les caractéristiques d'un bon test unitaire ?
 142. Qu'est-ce qu'une assertion dans un test unitaire ?
-
-
 
 ## English
 
