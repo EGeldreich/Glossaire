@@ -384,11 +384,17 @@
     a. Entité
 
     > Une entité est un élément que l'on souhaite représenter dans sa base de donnée. **_USER_** **_COMMENT_** **_TEACHER_** ...
-    > b. Relation
+
+    b. Relation
+
     > Lien entre les entités
-    > c. Cardinalité
+
+    c. Cardinalité
+
     > Type du lien, **_ManyToOne_** **_OneToMany_** ...
-    > d. Clé primaire / clé étrangère
+
+    d. Clé primaire / clé étrangère
+
     > La clé primaire est l'identifiant unique de l'entité
     > La clé étrangère est la référence d'une clé primaire d'une autre table
 
@@ -573,11 +579,12 @@
 
 100.    Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 
-        > Le hachage transforme un mot de passe en une chaine de caractères plus complexe, afin de ne pas stocker "en clair" le mdp des utilisateurs.
-        > Algorithme de hachage faible : md5 // sha256
-        > Algorithme de hachage fort : bcrypt (defaut actuellement sur password_hash) // argon2i
 
-101.    Qu’est-ce qu’une politique de mots de passe forts ?
+    > Le hachage transforme un mot de passe en une chaine de caractères plus complexe, afin de ne pas stocker "en clair" le mdp des utilisateurs.
+    > Algorithme de hachage faible : md5 // sha256
+    > Algorithme de hachage fort : bcrypt (defaut actuellement sur password_hash) // argon2i
+
+101. Qu’est-ce qu’une politique de mots de passe forts ?
 
 
     > Obligé l'utilisateur à créer un mot de passe complexe, voir recommandation CNIL
@@ -595,15 +602,74 @@
 ## RGPD
 
 104. Qu’est-ce que le RGPD ?
+
+
+    > Réglement Général sur la Protection des données.
+    > C'est un ensemble de règles qui visent à proteger les données des utilisateurs.
+
 105. Quel est son objectif principal ?
+
+
+    > La protection des données. Principalement contre des usages à fin commerciales ou malveillantes.
+
 106. Quelle est la date d’entrée en vigueur du RGPD ?
+
+
+    > Avril 2016
+
 107. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+
+
+    > Le non respect du RGPD peut mener à des amendes, allant jusqu'à 20M d'euros, ou 4% du chiffre d'aiffairs annuel mondial d'une entreprise
+
 108. En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+
+
+    > CNIL, Comission Nationale de l'Informatique et des Libertés
+
 109. Quel est le consentement valide selon le RPGD ?
+
+
+    > "toute manifestation de volonté, libre, spécifique, éclairée et univoque par laquelle la personne concernée accepte, par une déclaration ou par un acte positif clair, que des données à caractère personnel la concernant fassent l'objet d'un traitement"
+
 110. Qu’est-ce qu’une politique de confidentialité ?
+
+
+    > Une politique de confidentialité est un document qui explique comment une organisation se place par rapport aux données.
+    > Il y est spécifié la façon dont elle collecte, utilise, stocke et protège les données des utilisateurs.
+    > Elle informe les utilisateurs sur leurs droits quant à leur données.
+
 111. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+
+
+    > Il n'y a pas de durée de conservation maximale fixe, puisque cela dépend de l'usage de la donnée.
+    > Dans tous les cas, la durée de conservation doit être limitée au nécessaire.
+    > Par exemple, dans une entreprise, les données d’un candidat non retenu seront conservées pendant 2 ans maximum (sauf s’il en demande l’effacement) par le service des ressources humaines.
+    > A l'inverse, Les données de facturation doivent être conservées dix ans en application du Code de commerce.
+
 112. Quels sont les droits des utilisateurs selon le RGPD ?
+
+
+    > **Droit d'accès** : droit de savoir si ses données sont traitées, et si oui, d'obtenir des informations sur ce traitement.
+
+    > **Droit de rectification** : droit de demander des corrections sur ses données personnelles.
+
+    > **Droit à l'oubli** : droit de demander la suppression de ses données personnelles.
+
+    > **Droit à la limitation du traitement** : droit de demander la limitation du traitement des données personnelles, par exemple si leur exactitude est contestée.
+
+    > **Droit à la portabilité** : droit de recevoir ses données dans un format structuré.
+
+    > **Droit d'opposition** : droit de s'opposer au traitement de ses données personnelles, pour un motif légitime (y compris marketing direct).
+
+    > **Droit de ne pas faire l'objet d'une décision automatisée** : droit de ne pas être soumis à une décision basée uniquement sur un traitement automatisé.
+
+    > **Droit de retirer son consentement** : droit de retirer son consentement sur le traitement de ses données personnelles à tout moment.
+
 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+
+
+    > Ce principe veut que les données collectées se limitent à ce qui est nécessaire, pertinent et adéquat dans le cadre de l'usage prévu.
 
 ## SEO
 
