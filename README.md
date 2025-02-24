@@ -16,202 +16,214 @@
 
 1. Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
 
-    > Il faut installer un serveur local. Laragon ou MAMP permettent d'en créer un
+    Il faut installer un serveur local. Laragon ou MAMP permettent d'en créer un.
 
 2. Qu’est-ce qu’un algorithme ?
 
-    > Une suite d'odres à executer pour parvenir à un résultat
+    Une suite d'ordres à exécuter pour parvenir à un résultat.
 
 3. Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
 
-    > En PHP, une variable est un nom auquel on associe une valeur (pouvant prendre de nombreuse formes) qui peut varier. $nomDeMaVariable
+    En PHP, une variable est un nom auquel on associe une valeur (pouvant prendre de nombreuses formes) qui peut varier. `$nomDeMaVariable`
 
 4. Qu’est-ce que la portée d’une variable ?
 
-    > La portée d'une variable représente à quels endroit elle peut être appelée, certaines variable ne sont définie qu'à l'intérieur d'une fonction par exemple.
+    La portée d'une variable représente à quels endroits elle peut être appelée, certaines variables ne sont définies qu'à l'intérieur d'une fonction par exemple.
 
 5. Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
 
-    > Une constante est proche d'une variable - dans sa façon de la définir et sa portée - mais garde une valeur constante
+    Une constante est proche d'une variable - dans sa façon de la définir et sa portée - mais garde une valeur constante.
 
 6. Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
 
-    > Une superglobale est une variable disponible par défault en PHP. Il en existe 8.  
-    > $_GET $_POST $_COOKIE $_REQUEST $_SESSION $_FILES $_ENV $_SERVEUR  
-  	> $\_SESSION['products'][] = $product; Ajoute un objet $product précédemment défini dans le tableau 'products' de la session de l'utilisateur
+    Une superglobale est une variable disponible par défaut en PHP. Il en existe 8 : `$_GET`, `$_POST`, `$_COOKIE`, `$_REQUEST`, `$_SESSION`, `$_FILES`, `$_ENV`, `$_SERVER`.
+
+    ```php
+    $_SESSION['products'][] = $product; // Ajoute un objet $product précédemment défini dans le tableau 'products' de la session de l'utilisateur
+    ```
 
 7. Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
 
-    > Nombre entier (int) $a = 42;  
-    > Nombre décimal (float) $a = 4.2;  
-    > Chaine de caractères (string) $a = "hey";  
-    > Booléen (boolean) $a = false;  
-    > Tableau (array) $a = [ "a", "b"];  
-    > Object (object) $a = new myClass;  
-    > Vide (null) $a = null;
+    - Nombre entier (int) : `$a = 42;`
+    - Nombre décimal (float) : `$a = 4.2;`
+    - Chaine de caractères (string) : `$a = "hey";`
+    - Booléen (boolean) : `$a = false;`
+    - Tableau (array) : `$a = ["a", "b"];`
+    - Objet (object) : `$a = new myClass;`
+    - Vide (null) : `$a = null;`
 
 8. Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
 
-    > Tableaux indéxés ( $tableau = ["elem1" , "elem2", ...]) dont les clés sont par défaut des chiffres, commencant à 0.  
-    > Tableau associatif ( $tableau = [ "nom" => "Emmanuel", "age" => "31"] ) dont les clés sont des chaînes de caractères
+    - Tableaux indexés : `$tableau = ["elem1", "elem2", ...]` (clés par défaut des chiffres, commençant à 0)
+    - Tableaux associatifs : `$tableau = ["nom" => "Emmanuel", "age" => "31"]` (clés sont des chaînes de caractères)
 
 9. Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
 
-    > Structure conditionnelle : Execute l'instruction si une condition est vérifiée (if)
-    > Structure itérative : Repète une suite d'instruction un certain nombre de fois (foreach / for / while ...)
+    - Structure conditionnelle : Exécute l'instruction si une condition est vérifiée (if)
+    - Structure itérative : Répète une suite d'instructions un certain nombre de fois (foreach / for / while ...)
 
 10. Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
 
-    > strlen(string $string): int
+    ```php
+    strlen(string $string): int
+    ```
 
 11. Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
 
-    > session_start() crée une session ou reprend celle en cours
-    > Une session permet de stocker des informations qui restent disponibles à travers plusieurs pages
+    Une session permet de stocker des informations qui restent disponibles à travers plusieurs pages. La fonction `session_start()` crée une session ou reprend celle en cours.
 
 12. Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 
-    > Un cookie est une variable stockée dans le navigateur, un peu comme une session mais qui ne se termine pas forcément à la fermeture du site
-    > On peut par exemple stocké un cookie afin que le site se 'souvienne' du login (remember me)
+    Un cookie est une variable stockée dans le navigateur, un peu comme une session mais qui ne se termine pas forcément à la fermeture du site. On peut par exemple stocker un cookie afin que le site se 'souvienne' du login (remember me).
 
 13. Quelle est la différence entre les instructions « require » et « include » en PHP
 
-    > Require et Include permettent de récupérer le contenu code d'un fichier A dans un autre fichier B. Cela permet de structurer son fichier de travail.
-    > Ils sont identiques mis à part en cas d'echec, require produit une E_COMPILE_ERROR (fatal error qui arrete le script), alors qu'include produit un E_WARNING (warning et le script continue)
+    Require et Include permettent de récupérer le contenu code d'un fichier A dans un autre fichier B. Cela permet de structurer son fichier de travail. Ils sont identiques mis à part en cas d'échec, require produit une E_COMPILE_ERROR (fatal error qui arrête le script), alors qu'include produit un E_WARNING (warning et le script continue).
 
 14. Comment effectuer une redirection en PHP ?
 
-    > header('Location: http://www.example.com/');
+    ```php
+    header('Location: http://www.example.com/');
+    ```
 
 15. Définir la partie « front-end » et « back-end » d’une application
 
-    > La partie front-end englobe toute la partie visible d'une application, celle avec avec l'utilisateur interagit
-    > La partie back-end est la partie 'cachée', dans laquelle se déroule la logique, comme l'interaction avec la base de donnée
+    - La partie front-end englobe toute la partie visible d'une application, celle avec laquelle l'utilisateur interagit.
+    - La partie back-end est la partie 'cachée', dans laquelle se déroule la logique, comme l'interaction avec la base de données.
 
 16. Définir le contrôle de version ? Qu’est-ce que Git ?
 
-    > Le contrôle de version est le fait de sauvegarder son travail sans écraser les versions précédentes. Cela permet de revenir à une version précédante si besoin.
-    > Git est le VCS (version control system) lié à Github notament
+    Le contrôle de version est le fait de sauvegarder son travail sans écraser les versions précédentes. Cela permet de revenir à une version précédente si besoin. Git est le VCS (version control system) lié à GitHub notamment.
 
 17. Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
-    > CMS, Content Management System, est un outil qui accompagne dans la création d'application web.
-    > Un CMS arrive souvent avec des thèmes pour la partie front-end, et un back-office déjà créé.
-    > Wordpress, Drupal, Webflow
+    CMS, Content Management System, est un outil qui accompagne dans la création d'application web. Un CMS arrive souvent avec des thèmes pour la partie front-end, et un back-office déjà créé. Exemples : Wordpress, Drupal, Webflow.
 
 ## Front-end
 
 18. Définir HTML
 
-    > HyperText Markup Langage, l'html est l'ossature d'un site web, son fond, le contenu lisible.
+    HTML (HyperText Markup Language) est l'ossature d'un site web, son fond, le contenu lisible.
 
 19. Définir CSS
 
-    > Cascading Style Sheets, le CSS est la surcouche de décors par dessus l'html. Il sert à améliorer l'expérience utilisateur en créant une interface pratique.
+    CSS (Cascading Style Sheets) est la surcouche de décors par-dessus l'HTML. Il sert à améliorer l'expérience utilisateur en créant une interface pratique.
 
 20. Définir Javascript
 
-    > Le javascript est le langage utilisé principalement pour ajouter de l'interactivité à un site, il vient généralement en renfort du CSS pour améliorer l'expérience utilisateur.
+    JavaScript est le langage utilisé principalement pour ajouter de l'interactivité à un site, il vient généralement en renfort du CSS pour améliorer l'expérience utilisateur.
 
 21. Définir JSON. Dans quel contexte ce format est-il utilisé ?
 
-    > JavaScript Object Notation, le JSON est le principale langage utilisé lors de l'échange de données simples, par exemple lors de l'utilisation d'API
+    JSON (JavaScript Object Notation) est le principal langage utilisé lors de l'échange de données simples, par exemple lors de l'utilisation d'API.
 
 22. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 
-    > Il est possible d'utiliser le langage JavaScript coté serveur, en utilisant Node.JS par exemple
+    Il est possible d'utiliser le langage JavaScript côté serveur, en utilisant Node.js par exemple.
 
 23. Qu’est-ce qu’un sélecteur CSS ?
 
-    > Un sélecteur CSS est ce qui définie ("sélectionne") les éléments qui seront affectés par le code qui lui est donné
-    > .exemple { sélectionne tous les éléments ayant la classe exemple }
+    Un sélecteur CSS est ce qui définit ("sélectionne") les éléments qui seront affectés par le code qui lui est donné.
+
+    ```css
+    .exemple {
+    	/* sélectionne tous les éléments ayant la classe exemple */
+    }
+    ```
 
 24. Quelle balise HTML permet de créer un lien hypertexte ?
 
-    > <a href="adress.du.lien">Texte cliquable</a>
+    ```html
+    <a href="adress.du.lien">Texte cliquable</a>
+    ```
 
 25. Qu’est-ce qu’une requête AJAX ?
 
-    > Requête HTTP asynchrone qui met à jour des parties de la page sans nécessiter un rafraichissement
+    Une requête HTTP asynchrone qui met à jour des parties de la page sans nécessiter un rafraîchissement.
 
 26. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 
-    > .classe{} #id{} type{}
+    ```css
+    .classe {
+    	/* sélectionne tous les éléments ayant la classe spécifique */
+    }
+    #id {
+    	/* sélectionne l'élément ayant l'identifiant spécifique */
+    }
+    ```
 
 27. Définir le responsive design
 
-    > Le responsive design fait référence à la fléxibilité de l'interface d'un site lors du changement de la taille de l'écran.  
-    > Un bon responsive design utilise des valeurs flexibles ( % par exemple ) et des breakpoints réfléchis à l'avance pour le changement du placement des éléments.
+    Le responsive design fait référence à la flexibilité de l'interface d'un site lors du changement de la taille de l'écran. Un bon responsive design utilise des valeurs flexibles (par exemple, %) et des breakpoints réfléchis à l'avance pour le changement du placement des éléments.
 
 28. Qu’est-ce que le templating ?
 
-    > Le templating est le fait de créer un élément (comme une nav, footer ...) dans un fichier à part, et de l'appeler sur les pages où il est nécessaire
+    Le templating est le fait de créer un élément (comme une nav, footer, etc.) dans un fichier à part, et de l'appeler sur les pages où il est nécessaire.
 
 29. Qu’est-ce qu’une fonction anonyme en Javascript ?
 
-    > Un fonction anonyme est une fonction qui n'est pas nommé. C'est régulièrement le cas pour les fonctions qui sont utilisés dès leur création, comme dans un addEventListener par exemple
+    Une fonction anonyme est une fonction qui n'est pas nommée. C'est régulièrement le cas pour les fonctions qui sont utilisées dès leur création, comme dans un `addEventListener` par exemple.
 
 30. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
-    > tableau.push(element);
+    ```javascript
+    tableau.push(element);
+    ```
 
 31. Qu’est-ce qu’un « media query » ?
 
-    > Un media query est un "breakpoint" (point de bascule) utilisé en CSS pour définir des attributs qui deviennent valable dans certains cas, lorsque le breakpoint est activé.
+    Un media query est un "breakpoint" (point de bascule) utilisé en CSS pour définir des attributs qui deviennent valables dans certains cas, lorsque le breakpoint est activé.
 
 32. Qu’est-ce qu’un pseudo élément en CSS ?
 
-    > Un pseudo élément CSS est un élément qui n'existe pas en HTML mais qui est créé en CSS, par exemple ::before crée un ouvel élément avant l'élément selectionné
+    Un pseudo élément CSS est un élément qui n'existe pas en HTML mais qui est créé en CSS, par exemple `::before` crée un nouvel élément avant l'élément sélectionné.
 
-33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalents
 
-    > Bootstrap est une librairie CSS, qui permet d'ajouter à son HTML des classes pré-stylisées.
-    > TailWind est équivalent dans son utilisation.
+    Bootstrap est une librairie CSS, qui permet d'ajouter à son HTML des classes pré-stylisées. TailWind est équivalent dans son utilisation.
 
 34. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
-    > method="POST" et method="GET".
-    > POST stocke les données dans la session alors que GET les stocke dans l'URL.
-    > POST est donc plus 'privatif' et moins sujet aux changements par l'utilisateur.
+    Les méthodes sont `POST` et `GET`.
+
+    -   `POST` stocke les données dans la session alors que `GET` les stocke dans l'URL.
+    -   `POST` est donc plus 'privatif' et moins sujet aux changements par l'utilisateur.
 
 ## UX UI
 
 35. Quelle est la différence entre UX Design et UI Design ?
 
-    > UX (experience utilisateur) concerne tout ce qui est lié à l'ergonomie d'un site (arborescence, affordance, interaction ...)  
-    > UI (interface utilisateur) concerne l'interface elle même (typographie, couleurs)
-    > Les deux sont liés, puisque l'UI fait partie de l'experience utilisateur
+    -   **UX (expérience utilisateur)** concerne tout ce qui est lié à l'ergonomie d'un site (arborescence, affordance, interaction, etc.).
+    -   **UI (interface utilisateur)** concerne l'interface elle-même (typographie, couleurs).
+    -   Les deux sont liés, puisque l'UI fait partie de l'expérience utilisateur.
 
 36. Qu’est-ce qu’un wireframe ?
 
-    > Un wireframe est généralement la première étape pour poser un design, il s'agit de l'ossature, qui se concentre sur le placement des éléments et leur taille
+    Un wireframe est généralement la première étape pour poser un design. Il s'agit de l'ossature, qui se concentre sur le placement des éléments et leur taille.
 
 37. Qu’est-ce qu’un prototype ?
 
-    > Un prototype, en web, est une maquette poussée, avec les interactions visibles, ainsi que les liens entre les différentes pages
+    Un prototype, en web, est une maquette poussée, avec les interactions visibles, ainsi que les liens entre les différentes pages.
 
 38. Qu’est-ce que la hiérarchie visuelle en UI Design ?
 
-    > La hiérarchie visuelle est le fait que certains éléments doivent primer sur d'autres, car ils sont plus important.
-    > On peut influencer la hiérarchie visuelle via la taille ou la couleur par exemple
+    La hiérarchie visuelle est le fait que certains éléments doivent primer sur d'autres, car ils sont plus importants. On peut influencer la hiérarchie visuelle via la taille ou la couleur par exemple.
 
 39. Qu’est-ce que l’accessibilité en UX Design ?
 
-    > L'accessibilité est la capacité (nécessité) pour un site d'être consulté par des personnes avec divers handicap physique (mauvaise vue, membre cassé ...) ou matérielle ( mauvaise connexion / pas de souris ...)
+    L'accessibilité est la capacité (nécessité) pour un site d'être consulté par des personnes avec divers handicaps physiques (mauvaise vue, membre cassé, etc.) ou matériels (mauvaise connexion, pas de souris, etc.).
 
 40. Qu’est-ce qu’une grille de mise en page ?
 
-    > Une grille de mise en page est une grille que l'on utilise lors de la création de wireframes ou maquette pour s'assurer que les éléments soient placés correctement (alignés, même espacement ...)
+    Une grille de mise en page est une grille que l'on utilise lors de la création de wireframes ou maquettes pour s'assurer que les éléments soient placés correctement (alignés, même espacement, etc.).
 
 41. Qu’est-ce que la notion d’affordance en UX Design ?
 
-    > La notion d'affordance est à la capacité d'un élément à être compris clairement.
-    > Le fait que le curseur change au survol d'un élément cliquable, ou l'utilisation d'icones répandues sont des éléments qui favorisent l'affordance
+    La notion d'affordance est la capacité d'un élément à être compris clairement. Le fait que le curseur change au survol d'un élément cliquable, ou l'utilisation d'icônes répandues sont des éléments qui favorisent l'affordance.
 
 42. Qu’est-ce qu’un « mobile first design » ?
 
-    > Un design mobile first est un design qui se concentre en premier lieu sur sa version réduite (mobile) puis qui pense sa version grand écran en second temps  
-    > Cette méthode est souvent utilisé pour les sites / web apps qui visent une utilisation principalement sur mobile
+    Un design mobile first est un design qui se concentre en premier lieu sur sa version réduite (mobile) puis qui pense sa version grand écran en second temps. Cette méthode est souvent utilisée pour les sites/web apps qui visent une utilisation principalement sur mobile.
 
 ## Programmation orientée objet (POO)
 
