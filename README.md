@@ -388,6 +388,8 @@
     b. Relation
 
     > Lien entre les entités
+    > Un auteur **ECRIT** un livre
+    > Un lecteur **LIT** un livre
 
     c. Cardinalité
 
