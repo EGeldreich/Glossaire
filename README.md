@@ -676,18 +676,101 @@
 ## SEO
 
 114. Qu’est-ce que le SEO ?
+
+
+    > **S**earch **E**ngine **O**ptimization.
+    > Le SEO est l'optimisation de son site afin qu'il soit bien référencé par les moteurs de recherche
+
 115. Quel est l’objectif principal du SEO ?
+
+
+    > L'objectif principal du SEO est d'avoir un site bien référencé, et donc facilement trouvable par les utilisateurs.
+
 116. Existe-t-il plusieurs types de référencement ? Lesquels ?
+
+
+    > **Référencement naturel**, afin d'apparaitre dans les resultats d'une recherche.
+
+    > **Référencement payant (Search Engine Advertising)**, afin d'apparaitre en tête de liste pour un certain prix.
+
+    > **Référencement local**, afin d'apparaitre dans les recherches locales.
+
+    > **Référencement social**, présence sur les réseaux afin de créer du trafic par ce biais.
+
+    > **Référencement vidéo**, afin d'apparaitre dans les réulstats de recherche des moteurs des plateformes de partage de vidéos.
+
 117. Qu’est-ce que la densité de mots-clés en SEO ?
+
+
+    > La densité de mots-clés représente le pourcentage de mots ou phrases clés par rapport au contenu total d'une page.
+    > Il est recommandé de maintenir une densité de 1 à 3% pour éviter d'être pénaliser.
+
 118. Qu’est-ce qu’une balise « alt » ?
+
+
+    > Une balise alt sert à donner un contexte textuel à une image. Cela aide pour le référencement, ainsi que pour l'accessibilité.
+
 119. Qu’est-ce que la balise « meta description » ?
+
+
+    > La balise méta description fournit un résumé du contenu d'un site.
+    > Elle est utilisée par les moteurs de rechercher pour afficer un extrait de la page dans les résultats de recherche.
+
+    ```html
+    <meta name="description" content="Ce site propose des tutoriels et des ressources pour apprendre la programmation web.">
+    ```
+
 120. Qu’est-ce que le « nofollow » en SEO ?
+
+
+    > On peut ajouter un attribut "nofollow" à un lien HTML pour indiquer aux moteurs de recherche de ne pas suivre ce lien.
+    > Cela permet de ne pas influer sur le SEO de la cible du lien.
+
+    ```html
+    <a href="http://www.example.com" rel="nofollow">Lien vers Example</a>
+    ```
+
 121. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+
+
+    > Un contenu de qualité influt de plusieurs manière sur le référencement.
+    > Directement, les moteurs les plus performants sont capables de juger de la qualité du contenu et de jauger le référencement en fonction.
+    > Indirectement, un contenu de qualité entraine des comportements d'utilisateurs qui sont appréciés par les moteurs de recherche.
+    > (Partage, engagement, faible taux de rebond)
+
 122. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+
+
+    > Ces balises sont utilisées par les moteurs de recherche pour comprendre la structure et le contenu de la page.
+    > Cela est également utile pour l'accessibilité et l'experience utilisateur dans son ensemble.
+
 123. Quelle est la recommandation pour les URL d'un site web bien référencé ?
+
+
+    > URL courtes, claires et précises.
+    > Utilisation de - entre les mots.
+    > Organisation logique reflétant la structure du site.
+    ```text
+    https://www.example.com/blog/guide-seo
+    ```
+
 124. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+
+
+    > Le maillage interne est la création de liens internes vers les pages d'un même site.
+    > Cela est important pour l'UX, et aide els moteurs à indexer et explorer le site.
+
 125. Qu'est-ce que l'optimisation des images pour le référencement ?
+
+
+    > Utilisation de taille de fichier réduites sans compromettre la qualité.
+    > Utilisation de noms de fichiers descriptifs et de balise alt.
+
 126. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+
+
+    > Une sitemap est un fichier XML qui liste toutes les pages d'un site web.
+    > Cela aide les moteurs à comprendre la structure du site et à indexer toutes les pages.
 
 ## Gestion de projets - DevOps
 
@@ -711,34 +794,34 @@
 ## English
 
 1. What does JavaScript enable you to do on a website ?
-   a. Add interactive behavior and dynamic content
-   b. Define the layout and design of web pages
-   c. Handle server-side operations
+   a. **Add interactive behavior and dynamic content**
+   b. ~~Define the layout and design of web pages~~
+   c. ~~Handle server-side operations~~
 2. Which programming language is primarily used for server-side web development ?
-   a. PHP
-   b. JavaScript
-   c. HTML
+   a. **PHP**
+   b. ~~JavaScript~~
+   c. HTML~~
 3. What is the purpose of a web browser ?
-   a. To render and display web pages
-   b. To execute serve-side code
-   c. To manage databases
+   a. **To render and display web pages**
+   b. ~~To execute serve-side code~~
+   c. ~~To manage databases~~
 4. What is the difference between GET and POST methods in HTTP ?
-   a. GET retrieves data from a server, while POST submits data to a server
-   b. GET submits data to a server, while POST retrieves data from a server
-   c. GET and POST methods are interchangeable
+   a. **GET retrieves data from a server, while POST submits data to a server**
+   b. ~~GET submits data to a server, while POST retrieves data from a server~~
+   c. ~~GET and POST methods are interchangeable~~
 5. What is the purpose of version control systems (e.g., Git) in web development ?
-   a. To track changes and manage collaborative development
-   b. To optimize website loading speed
-   c. To handle server-side scripting
+   a. **To track changes and manage collaborative development**
+   b. ~~To optimize website loading speed~~
+   c. ~~To handle server-side scripting~~
 6. What is the purpose of a framework in web development ?
-   a. To provide a structured environment for building web applications
-   b. To handle network protocols and data transfer
-   c. To create visual designs and layouts for websites
+   a. **To provide a structured environment for building web applications**
+   b. ~~To handle network protocols and data transfer~~
+   c. ~~To create visual designs and layouts for websites~~
 7. What does NoSQL stand for ?
-   a. Not Only SQL
-   b. Non-Structured Query Language
-   c. New Object-Oriented Language
+   a. **Not Only SQL**
+   b. ~~Non-Structured Query Language~~
+   c. ~~New Object-Oriented Language~~
 8. Which of the following is a characteristic of NoSQL databases ?
-   a. Strict schema enforcement
-   b. Support for complex transactions
-   c. Scalability and flexible data models
+   a. ~~Strict schema enforcement~~
+   b. ~~Support for complex transactions~~
+   c. **Scalability and flexible data models**
